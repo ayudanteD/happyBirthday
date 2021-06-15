@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/birthday-cake.png"
+      type="image/x-icon"
+    />
+    <title>Feliz Cumpleaños Antonella!</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="wish">Happy Birthday</div>
+    <div class="cake" id="cake-speech">
+      <div class="plate"></div>
+      <div class="layer"></div>
+      <div class="icing">
+        <div class="name">
+          <p>
+            Feliz Cumpleaños <br />
+            <span id="name">Antonella</span>
+          </p>
+        </div>
+      </div>
+      <div class="candle1">
+        <div class="flame1"></div>
+      </div>
+      <div class="candle2">
+        <div class="flame2"></div>
+      </div>
+      <div class="candle3">
+        <div class="flame3"></div>
+      </div>
+      <div class="candle4">
+        <div class="flame4"></div>
+      </div>
+      <div class="candle5">
+        <div class="flame5"></div>
+      </div>
+    </div>
+    <div class="instruction" id="ad">Clickea la torta</div>
+    <script>
+      let msg = `Hola Antonela, tengo un mensaje de mi causa Edward, te mandó este mensaje a las 00:01 pero me dio flojera sonar equisdé. 
+      Bueno, no sé a qué hora lo verás, yo cumpliré con decirte el mensaje, cof cof y dice así: 
+      Feliz Cumpleañooooooooooooooooos,espero que la pases bonito con tus papás, tu hermano, y también con osito. 
+      Aunque probablemente estés con tareas y trabajos pipipipipi
+      Eres una persona muy valiosa, eres linda, divertida e inteligente nunca lo olvides  
+      Agradezco no haberme acobardado ese día y haberte esperado afuera del salón después de la clase de progra
+      ya que esa fue la primera vez que hablamos 
+      y me dijiste que te esperara porque ibas al baño equisdé, 
+      esa vez nos quedamos para la reunión del trabajo de biología 
+      y pues ahí empezó la amistad yeeee y hasta ahora se mantiene.
+      Te deseo muchos éxitos en los estudios y no te desanimes que sí se puede, con fe.
+      Este es un pequeño regalo para sacarte una pequeña sonrisa, je. 
+      posdata1: Espero que te haya gustado
+      posdata2: La fe es lo más lindo de la vida 
+      posdata3: No te he hackeado equisdé`;
+      const cake = document.getElementById("cake-speech");
+      const talk = (txt) =>
+        speechSynthesis.speak(new SpeechSynthesisUtterance(txt));
+      const newAd = () =>
+        (document.getElementById("ad").innerHTML = "Sube el Volumen UwU");
+      cake.addEventListener("click", () => talk(msg));
+      cake.addEventListener("click", () => newAd());
+    </script>
+  </body>
+</html>
